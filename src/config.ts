@@ -6,8 +6,8 @@ export const config = {
   eyeClosedThresholdHeadDown: 0.8, // when the head is down, eyes look half-closed, so we need more
   eyeClosedAlarmSec: 2.0, // eyes closed this long -> alarm
   normalBlinkSec: 0.4, // shorter closes are normal blinks
-  yawnThreshold: 0.55, // jawOpen above this
-  yawnMinSec: 1.2, // mouth open this long -> yawn
+  yawnThreshold: 0.35, // jawOpen above this
+  yawnMinSec: 0.8, // mouth open this long -> yawn
   yawnsBeforeStopAdvice: 2,
   calibrationSec: 3.0, // driver looks straight at start
   headDownFactor: 1.18, // ratio > baseline * this -> head down
