@@ -4,3 +4,5 @@ dist
 public/mediapipe
 *.zip
 *.tsbuildinfo
+# Needs the "workflow" permission to push; add later
+.github/
