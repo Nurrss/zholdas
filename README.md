@@ -78,25 +78,28 @@ All phrases (what Zholdas says) are in **`src/lib/phrases.ts`**.
 
 The camera on a phone works only with **HTTPS**. GitHub Pages gives you HTTPS.
 
-1. Go to [github.com/new](https://github.com/new). Name the repository **`zholdas`**. Make it **Public**. Click **Create repository**.
-2. In the project folder, run:
+Live app: **https://nurrss.github.io/zholdas/** · Dispatcher: **https://nurrss.github.io/zholdas/dispatch/**
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Zholdas"
-   git branch -M main
-   git remote add origin https://github.com/<your-name>/zholdas.git
-   git push -u origin main
-   ```
+**To deploy a new version** (after you change something):
 
-3. On GitHub, open the repository → **Settings** → **Pages**.
-   Under **Build and deployment** → **Source**, choose **GitHub Actions**.
-4. Open the **Actions** tab. Wait until "Deploy to GitHub Pages" is green (about 1–2 minutes).
-   If it ran before step 3 and failed, click it → **Re-run all jobs**.
-5. Your app: **`https://<your-name>.github.io/zholdas/`**
+```bash
+git add -A
+git commit -m "What I changed"
+git push            # saves the code on GitHub
+npm run deploy      # builds and publishes the site (branch gh-pages)
+```
 
-Every new `git push` to `main` deploys the app again.
+Wait about 1 minute, then reload the site. On the phone, close and open the app twice
+(the service worker loads the new version in the background).
+
+### Later: automatic deploy on every push (optional)
+
+The file `.github/workflows/deploy.yml` can deploy automatically on every `git push`.
+To push this file, GitHub needs the `workflow` permission:
+
+1. Run `gh auth refresh -h github.com -s workflow` and confirm in the browser.
+2. Remove the `.github/` line from `.gitignore`, then `git add .github && git commit -m "Add deploy workflow" && git push`.
+3. On GitHub: **Settings → Pages → Source → GitHub Actions**.
 
 ## Backup way: Netlify Drop
 
