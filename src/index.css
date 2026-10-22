@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #0f2236;
+  color: #e6eef0;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.safe-top {
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+.safe-bottom {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-4px) scale(1.03); }
+}
+.animate-breathe {
+  animation: breathe 3.2s ease-in-out infinite;
+}
+
+/* Car marker on the map */
+.car-marker {
+  width: 44px;
+  height: 44px;
+}
+
+/* Keep map credits above the bottom bar */
+.maplibregl-ctrl-bottom-left {
+  bottom: calc(68px + env(safe-area-inset-bottom));
+}
+
+/* Diagnostics: sound waves around the avatar */
+@keyframes zh-wave {
+  0% { transform: scale(0.62); opacity: 0.9; }
+  100% { transform: scale(1.12); opacity: 0; }
+}
+.zh-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #5fc7d4;
+  animation: zh-wave 2.4s ease-out infinite;
+}
+.zh-ring-2 { animation-delay: 0.8s; }
+.zh-ring-3 { animation-delay: 1.6s; }
+@media (prefers-reduced-motion: reduce) {
+  .zh-ring { animation: none; opacity: 0.35; }
+  .zh-ring-2 { transform: scale(0.82); }
+  .zh-ring-3 { transform: scale(1); }
+}
+
+/* Dispatch page: a normal scrolling web page (the app itself does not scroll) */
+html.dispatch,
+html.dispatch body,
+html.dispatch #root {
+  height: auto;
+  min-height: 100%;
+  overflow: auto;
+  background: #e6eef0;
+  color: #0f2236;
+  user-select: text;
+  -webkit-user-select: text;
+}

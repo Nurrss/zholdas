@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Жолдас — слушаю мотор</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#FFFFFF}a:hover{color:#FFFFFF}
+@keyframes zh-wave{0%{transform:scale(0.62);opacity:0.9}100%{transform:scale(1.12);opacity:0}}
+.zh-ring{position:absolute;left:0;top:0;width:330px;height:330px;border-radius:50%;box-sizing:border-box;border:3px solid #5FC7D4;animation:zh-wave 2.4s ease-out infinite}
+.zh-ring-2{animation-delay:0.8s}
+.zh-ring-3{animation-delay:1.6s}
+@media (prefers-reduced-motion: reduce){.zh-ring{animation:none;opacity:0.35}.zh-ring-2{transform:scale(0.82)}.zh-ring-3{transform:scale(1)}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 20px 24px 28px; display: flex; flex-direction: column; align-items: center; background: #0F2236; font-family: Rubik, system-ui, sans-serif; color: #FFFFFF; overflow: hidden">
+
+  <div style="width: 100%; display: flex; align-items: center; gap: 12px">
+    <button type="button" aria-label="Назад" style="width: 44px; height: 44px; border-radius: 14px; border: 1px solid #1E3A55; background: #13293F; display: flex; align-items: center; justify-content: center; cursor: pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+    </button>
+    <div style="font-size: 18px; font-weight: 600">Диагностика по звуку</div>
+  </div>
+
+  <div style="position: relative; width: 330px; height: 330px; margin-top: 20px; flex-shrink: 0">
+    <div class="zh-ring"></div>
+    <div class="zh-ring zh-ring-2"></div>
+    <div class="zh-ring zh-ring-3"></div>
+    <div style="position: absolute; left: 0; top: 0; width: 330px; height: 330px; border-radius: 50%; background: rgba(95,199,212,0.08)"></div>
+    <img src="../avatar/listen.png" alt="Жолдас слушает мотор стетоскопом" style="position: absolute; left: 50px; top: 50px; width: 230px; height: 230px; border-radius: 50%; object-fit: cover; display: block; box-sizing: border-box; border: 4px solid #5FC7D4; background: #EEEEEE; box-shadow: 0 0 40px rgba(95,199,212,0.35)">
+  </div>
+
+  <div style="font-size: 36px; font-weight: 700; letter-spacing: -0.01em; margin-top: 16px">Слушаю мотор…</div>
+  <div style="font-size: 20px; line-height: 1.35; color: #CFE0E8; text-align: center; margin-top: 8px">Заведи машину и не газуй<br>15 секунд</div>
+
+  <div style="width: 100%; margin-top: 28px">
+    <div style="display: flex; align-items: baseline; justify-content: space-between">
+      <div style="font-size: 22px; font-weight: 600">9 из 15 сек</div>
+      <div style="font-size: 15px; color: #8FB3C4">осталось 6 сек</div>
+    </div>
+    <div style="height: 14px; border-radius: 7px; background: #1E3A55; margin-top: 10px; overflow: hidden">
+      <div style="width: 60%; height: 14px; border-radius: 7px; background: #5FC7D4"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 8px; margin-top: 18px">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FC7D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10-5 5V2l5 5L7 17"></path></svg>
+    <div style="font-size: 15px; color: #B7CDD8">Подключён OBD-адаптер</div>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3FB97F" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-label="подключён" role="img"><path d="M5 12l5 5 9-10"></path></svg>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+
+  <a href="Drive.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 64px; border-radius: 20px; box-sizing: border-box; border: 2px solid #5A7A92; color: #FFFFFF; text-decoration: none; font-size: 21px; font-weight: 600">Отменить</a>
+</div>
+</x-dc>
+
+</body>
+</html>

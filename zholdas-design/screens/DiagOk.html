@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Жолдас — мотор в порядке</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 20px 24px 28px; display: flex; flex-direction: column; background: #E6EEF0; font-family: Rubik, system-ui, sans-serif; color: #0F2236; overflow: hidden">
+
+  <div style="display: flex; align-items: center; gap: 12px">
+    <button type="button" aria-label="Назад" style="width: 44px; height: 44px; border-radius: 14px; border: 1px solid #B9CBD1; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F2236" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+    </button>
+    <div style="font-size: 18px; font-weight: 600">Диагностика по звуку</div>
+  </div>
+
+  <div style="display: flex; justify-content: center; margin-top: 14px">
+    <img src="../avatar/ok.png" alt="Жолдас показывает большой палец вверх" style="width: 190px; height: 190px; border-radius: 50%; object-fit: cover; display: block; box-sizing: border-box; border: 4px solid #FFFFFF; background: #EEEEEE; box-shadow: 0 0 0 3px #3FB97F, 0 12px 30px rgba(15,34,54,0.14)">
+  </div>
+
+  <div style="font-size: 32px; font-weight: 700; line-height: 1.12; letter-spacing: -0.01em; text-align: center; margin-top: 18px">Мотор звучит<br>как обычно</div>
+  <div style="font-size: 15px; color: #3D5468; text-align: center; margin-top: 6px">Проверка сегодня, 12:20</div>
+
+  <div style="margin-top: 18px; padding: 16px 18px; border-radius: 22px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <div style="font-size: 15px; color: #3D5468">Звук мотора</div>
+      <div style="font-size: 20px; font-weight: 600">как в прошлый раз</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #D9F2E6; color: #1E6B45; font-size: 15px; font-weight: 600; flex-shrink: 0">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E6B45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>
+      Норма
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 10px">
+    <div style="padding: 14px 12px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 14px; color: #3D5468; min-height: 34px">Температура</div>
+      <div style="font-size: 26px; font-weight: 700; line-height: 1">90 °C</div>
+    </div>
+    <div style="padding: 14px 12px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 14px; color: #3D5468; min-height: 34px">Ошибки двигателя</div>
+      <div style="font-size: 26px; font-weight: 700; line-height: 1">нет</div>
+    </div>
+    <div style="padding: 14px 12px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 14px; color: #3D5468; min-height: 34px">Аккумулятор</div>
+      <div style="font-size: 26px; font-weight: 700; line-height: 1">14,1 В</div>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+
+  <button type="button" style="height: 72px; border-radius: 22px; border: 0; background: #1B9AAA; color: #0F2236; font-family: Rubik, system-ui, sans-serif; font-size: 26px; font-weight: 700; cursor: pointer">Готово</button>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 12px">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D5468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+    <div style="font-size: 15px; color: #3D5468">Следующая проверка через 7 дней</div>
+  </div>
+</div>
+</x-dc>
+
+</body>
+</html>
